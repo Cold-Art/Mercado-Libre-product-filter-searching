@@ -44,7 +44,7 @@ class MercadoPage:
     def zipcode(self):
         iframe = self.chrome_driver.find_element(By.CSS_SELECTOR, "iframe[src*='addresses-hub']")
         self.chrome_driver.switch_to.frame(iframe)  #starting the frame
-        time.sleep(1)
+        time.sleep(2)
         self.wait.until(EC.visibility_of_element_located(self.field_zipcode)).send_keys('11510', Keys.ENTER)
         self.chrome_driver.switch_to.default_content() #ending the frame
         time.sleep(1)
